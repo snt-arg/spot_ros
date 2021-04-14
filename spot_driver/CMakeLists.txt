@@ -5,15 +5,15 @@ find_package(catkin REQUIRED COMPONENTS)
 
 catkin_package()
 
+catkin_python_setup()
+
 include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
 catkin_install_python(
 	PROGRAMS
-	  scripts/ros_helpers.py
 	  scripts/spot_ros.py
-	  scripts/spot_wrapper.py
 	  scripts/__init__.py
     DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
